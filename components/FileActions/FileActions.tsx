@@ -1,0 +1,35 @@
+import { FC } from 'react';
+
+import styles from './FileActions.module.scss';
+import { Button, Popconfirm } from 'antd';
+
+interface FileActionsProps {
+  onClickRemove: VoidFunction;
+  onClickShare: VoidFunction;
+  isActive: boolean;
+}
+
+export const FileActions: FC<FileActionsProps> = ({
+  onClickRemove,
+  onClickShare,
+  isActive,
+}) => {
+  return (
+    <div className={styles.root}>
+      <Button onClick={onClickShare}>Поделиться</Button>
+
+      <Popconfirm
+        title={'Удалить файл(ы)?'}
+        description={'Все файлы будутпомещены в корзину'}
+        okText={'Да'}
+        cancelText={'Нет'}
+        disabled={!isActive}
+        onConfirm={onClickRemove}
+      >
+        <Button disabled={!isActive} type={'primary'} danger>
+          Удалить
+        </Button>
+      </Popconfirm>
+    </div>
+  );
+};
