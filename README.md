@@ -1,39 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped
-with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Project
 
-## Getting Started
+## Описание
+Этот проект представляет собой интерфейс пользователя для управления файлами
+для проекта бэкенда: https://github.com/Triton556/cloud-store-backend
+Он позволяет загружать файлы, просматривать список файлов, просматривать отдельно фото, 
+выбирать файлы для удаления и просматривать файлы в корзине.
 
-First, run the development server:
+Реализована система авторизации и регистрации.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Основные функции
+- Авторизация/Регистрация
+- Загрузка файлов
+- Просмотр списка файлов
+- Просмотр списка фото
+- Выбор файлов для удаления
+- Просмотр файлов в корзине
+- Просмотр профиля
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Используемые технологии
+- Next
+- Ant Design
+- React
+- React Selecto (для выделения файлов)
+- Axios (для запросов к серверу)
+- nookies (для работы с куками)
+- scss для стилей
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Установка и запуск
+1. Клонируйте репозиторий
+2. Установите зависимости с помощью `pnpm install`
+3. Запустите бэкенд https://github.com/Triton556/cloud-store-backend
+4. Запустите проект с помощью `pnpm run dev`
+5. Перейдите на localhost:****/dashboard
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and
-load Inter, a custom Google Font.
+## Скрины
+### Основная страница с файлами
+Страницы с фото и корзина выглядят идентично (в корзине нет кнопок удалить и поделиться)
 
-## Learn More
+![image](https://github.com/Triton556/cloud-store-frontend/assets/43929177/e72a8fe9-073b-49c4-9ff9-a8ef3cf213c6)
 
-To learn more about Next.js, take a look at the following resources:
+### Страница авторизации
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions
-are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use
-the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![image](https://github.com/Triton556/cloud-store-frontend/assets/43929177/e7eff544-ac1e-4c3d-8d97-c447fac318f9)
