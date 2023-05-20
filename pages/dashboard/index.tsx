@@ -25,9 +25,11 @@ DashboardPage.getLayout = (page: React.ReactNode) => {
 };
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
-  const authProps = checkAuth(ctx);
+  const authProps = await checkAuth(ctx);
+  console.log('authProps: \n', authProps);
 
   if ('redirect' in authProps) {
+    console.log('redirect');
     return authProps;
   }
 

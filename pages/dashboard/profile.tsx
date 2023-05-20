@@ -37,8 +37,8 @@ DashboardProfilePage.getLayout = (page: ReactNode) => {
   return <Layout title={'Dashboard / Профиль'}>{page}</Layout>;
 };
 
-export const getServerSideProps = (ctx: GetServerSidePropsContext) => {
-  return checkAuth(ctx);
+export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
+  return await checkAuth(ctx);
 };
 
 export default DashboardProfilePage;

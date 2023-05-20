@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.scss';
+import { GetServerSidePropsContext } from 'next';
+import { checkAuth } from '@/utils/checkAuth';
 
-export default function Home() {
+function Home() {
   return (
     <>
       <Head>
@@ -15,3 +17,21 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
+  const authProps = await checkAuth(ctx);
+
+  if ('redirect' in authProps) {
+    console.log('redirect index');
+    return authProps;
+  } else {
+    return {
+      redirect: {
+        destination: '/dashboard',
+        permanent: false,
+      },
+    };
+  }
+};
+
+export default Home;

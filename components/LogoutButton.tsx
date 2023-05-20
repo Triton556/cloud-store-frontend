@@ -7,7 +7,7 @@ const LogoutButton: React.FC = () => {
   const onClickLogout = () => {
     if (window.confirm('Вы действительно хотите выйти?')) {
       Api.auth.logout();
-      router.push('/');
+      window.location.reload();
     }
   };
   return (
