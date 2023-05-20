@@ -37,8 +37,8 @@
 ### Основная страница с файлами
 Страницы с фото и корзина выглядят идентично (в корзине нет кнопок удалить и поделиться)
 
-![image](https://github.com/Triton556/cloud-store-frontend/assets/43929177/e72a8fe9-073b-49c4-9ff9-a8ef3cf213c6)
+![image](https://github.com/Triton556/cloud-store-frontend/assets/43929177/425f34f2-edfd-4170-903a-0af3d1031ae8)
 
 ### Страница авторизации
 
-![image](https://github.com/Triton556/cloud-store-frontend/assets/43929177/e7eff544-ac1e-4c3d-8d97-c447fac318f9)
+![image](https://github.com/Triton556/cloud-store-frontend/assets/43929177/abd430eb-822e-41a4-a6c2-4287a70a9b18)
